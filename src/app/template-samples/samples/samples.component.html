@@ -1,0 +1,11 @@
+<h3>ngTemplate sample</h3>
+
+<ng-template #miTemplate let-texto1="titulo" let-texto2="subtitulo">
+  este es mi template - {{texto1}} - {{texto2}}
+</ng-template>
+
+<ng-template [ngTemplateOutlet]="miTemplate" [ngTemplateOutletContext]="{titulo:'mi titulo'}"></ng-template>
+<br>
+<ng-template [ngTemplateOutlet]="miTemplate" [ngTemplateOutletContext]="{titulo:'mi titulo 2',subtitulo:'mi subtitulo 2'}"></ng-template>
+
+

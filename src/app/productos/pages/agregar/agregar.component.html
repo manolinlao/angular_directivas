@@ -1,0 +1,35 @@
+<form [formGroup]="miFormulario">
+  <div class="row g-3 align-items-center mb-3">
+    <div class="col-auto">
+      <label class="col-form-label">Nombre:</label>
+    </div>
+    <div class="col-auto">
+      <input class="form-control" formControlName="nombre">
+    </div>
+    <div class="col-auto">
+      <span class="form-text" *ngIf="tieneError('nombre')" miDirectivaPersonalizada [color]="color" [mensaje]="textoMensaje">                
+      </span>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col">
+      <button class="btn btn-primary">
+        Guardar
+      </button>
+      <button (click)="cambiarTextoMensaje()">
+        Cambiar texto 
+      </button>
+      <button (click)="cambiarColorMensaje()">
+        Cambiar color
+      </button>
+    </div>
+  </div>
+
+</form>
+
+<h3 class="mt-1" miDirectivaPersonalizada [color]="color">Formulario</h3>
+<pre>value: {{miFormulario.value | json }}</pre>
+<pre>valid: {{miFormulario.valid}}</pre>
+
+
