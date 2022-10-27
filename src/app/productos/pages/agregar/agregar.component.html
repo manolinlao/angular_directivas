@@ -7,7 +7,7 @@
       <input class="form-control" formControlName="nombre">
     </div>
     <div class="col-auto">
-      <span class="form-text" *ngIf="tieneError('nombre')" miDirectivaPersonalizada [color]="color" [mensaje]="textoMensaje">                
+      <span class="form-text" miDirectivaPersonalizada [color]="color" [mensaje]="textoMensaje" [valido]="tieneError('nombre')">                
       </span>
     </div>
   </div>
